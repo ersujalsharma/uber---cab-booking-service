@@ -1,9 +1,24 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="V8NN63kaTcK6JpyfRdXf">
-    <mxGraphModel>
+    <mxGraphModel dx="964" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="zgzDocX5lwGxHwXeEKCY-4" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="360" width="430" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zgzDocX5lwGxHwXeEKCY-1" parent="zgzDocX5lwGxHwXeEKCY-4" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="360" width="430" as="geometry" />
+        </mxCell>
+        <mxCell id="zgzDocX5lwGxHwXeEKCY-2" parent="zgzDocX5lwGxHwXeEKCY-4" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Functional requirements&lt;/font&gt;&lt;/h1&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;A rider can enter pickup and drop-off locations.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;A rider can request a ride.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;The system identifies and notifies nearby available drivers.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;A driver can accept or reject a ride request.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;The system assigns the ride to one driver only.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;The rider receives an OTP after driver assignment; the driver verifies it to start the trip.&lt;/font&gt;&lt;/li&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="180" width="390" x="20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="zgzDocX5lwGxHwXeEKCY-3" parent="zgzDocX5lwGxHwXeEKCY-4" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Non-functional requirements&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;div&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;&quot;&gt;H&lt;/font&gt;&lt;font style=&quot;&quot;&gt;igh availability: users should be able to request and accept rides even during failures.&lt;/font&gt;&lt;/font&gt;&lt;/li&gt;&lt;/div&gt;&lt;div&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Low latency: matching and driver notifications should happen within a few seconds.&lt;/font&gt;&lt;/li&gt;&lt;/div&gt;&lt;div&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Eventual consistency for live location: a small delay in a driver’s displayed location is acceptable.&lt;/font&gt;&lt;/li&gt;&lt;/div&gt;&lt;div&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Reliability: prevent duplicate ride assignments and handle retries safely.&lt;/font&gt;&lt;/li&gt;&lt;/div&gt;&lt;div&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Scalability: support large volumes of ride requests and frequent driver-location updates.&lt;/font&gt;&lt;/li&gt;&lt;/div&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="180" width="390" x="10" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="zgzDocX5lwGxHwXeEKCY-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Design - Cab Boooking Service (UBER)" vertex="1">
+          <mxGeometry height="30" width="190" x="319" y="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
