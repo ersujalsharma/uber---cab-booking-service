@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="V8NN63kaTcK6JpyfRdXf">
-    <mxGraphModel dx="964" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1928" dy="1266" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -18,6 +18,24 @@
         </mxCell>
         <mxCell id="zgzDocX5lwGxHwXeEKCY-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Design - Cab Boooking Service (UBER)" vertex="1">
           <mxGeometry height="30" width="190" x="319" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-5" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="400" width="320" x="850" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-3" parent="PgYEmlTDX6lSRHRrRK8N-5" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="360" width="320" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-4" parent="PgYEmlTDX6lSRHRrRK8N-5" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;API - Endpoints&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(179, 255, 102));&quot;&gt;&amp;nbsp;/select_pickup_and_drop_location&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;-&amp;gt; pick_up_location + drop_location&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(51, 255, 51));&quot;&gt;&amp;nbsp;/sendRequest :&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;-&amp;gt; send your location (from - to)&lt;/p&gt;&lt;p&gt;&amp;nbsp;-&amp;gt; type of vehicle&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(51, 255, 51));&quot;&gt;/acceptRequest :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Details with otp(which you will share with rider)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;-&amp;gt; rider will get notification and accept the request.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 255, 0));&quot;&gt;/acceptRide&lt;/span&gt; : ask for otp&lt;/p&gt;&lt;p&gt;&amp;nbsp;-&amp;gt; show shortest Route&lt;/p&gt;&lt;p&gt;&amp;nbsp;-&amp;gt; track the location&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="349.99999999999994" width="299.1304347826087" x="10.434782608695652" y="27.777777777777768" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-6" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="210" width="200" x="560" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-1" parent="PgYEmlTDX6lSRHRrRK8N-6" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="200" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="PgYEmlTDX6lSRHRrRK8N-2" parent="PgYEmlTDX6lSRHRrRK8N-6" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Core Entities&lt;/h1&gt;&lt;p&gt;User (Driver + Rider)&lt;/p&gt;&lt;p&gt;Vehicle (Car+Bike)&lt;/p&gt;&lt;p&gt;Location&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(Where to Where)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="200" width="180" x="20" y="10" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
