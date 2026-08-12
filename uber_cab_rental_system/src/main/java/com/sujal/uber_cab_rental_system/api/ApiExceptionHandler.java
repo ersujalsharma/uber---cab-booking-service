@@ -7,6 +7,13 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
-    @ExceptionHandler(NotFoundException.class) ResponseEntity<Map<String, String>> notFound(NotFoundException error) { return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", error.getMessage())); }
-    @ExceptionHandler({IllegalArgumentException.class, IllegalStateException.class}) ResponseEntity<Map<String, String>> badRequest(RuntimeException error) { return ResponseEntity.badRequest().body(Map.of("error", error.getMessage())); }
+	@ExceptionHandler(NotFoundException.class)
+	ResponseEntity<Map<String, String>> notFound(NotFoundException error) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", error.getMessage()));
+	}
+
+	@ExceptionHandler({ IllegalArgumentException.class, IllegalStateException.class })
+	ResponseEntity<Map<String, String>> badRequest(RuntimeException error) {
+		return ResponseEntity.badRequest().body(Map.of("error", error.getMessage()));
+	}
 }

@@ -6,11 +6,23 @@ import java.util.UUID;
 
 @Entity
 public class Rider {
-    @Id private UUID id;
-    private String name;
+	@Id
+	private UUID id;
+	private String name;
 
-    protected Rider() { }
-    public Rider(UUID id, String name) { this.id = id; this.name = name; }
-    public UUID getId() { return id; }
-    public String getName() { return name; }
+	protected Rider() {
+	}
+
+	public Rider(UUID id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public UUID getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
 }
