@@ -85,6 +85,18 @@ public class RideService {
 		return RideResponse.from(rides.findById(id).orElseThrow(() -> new NotFoundException("Ride not found")));
 	}
 
+	@Transactional(readOnly = true)
+	public List<RideOfferResponse> availableForDriver(UUID driverId) {
+		Driver driver = drivers.findById(driverId).orElseThrow(() -> new NotFoundException("Driver not found"));
+		if (!driver.isAvailable())
+			return List.of();
+		return rides.findByStatusAndVehicleType(RideStatus.REQUESTED, driver.getVehicleType()).stream()
+				.map(ride -> new RideOfferResponse(RideResponse.from(ride), round(haversine(driver.getLatitude(),
+						driver.getLongitude(), ride.getPickupLatitude(), ride.getPickupLongitude()))))
+				.filter(offer -> offer.pickupDistanceKm() <= 5).sorted(Comparator.comparing(RideOfferResponse::pickupDistanceKm))
+				.toList();
+	}
+
 	private static BigDecimal calculateFare(CreateRideRequest request) {
 		double km = haversine(request.pickup().latitude(), request.pickup().longitude(), request.dropoff().latitude(),
 				request.dropoff().longitude());
@@ -101,5 +113,9 @@ public class RideService {
 				h = Math.sin(lat / 2) * Math.sin(lat / 2) + Math.cos(Math.toRadians(aLat))
 						* Math.cos(Math.toRadians(bLat)) * Math.sin(lon / 2) * Math.sin(lon / 2);
 		return 2 * 6371 * Math.asin(Math.sqrt(h));
+	}
+
+	private static double round(double value) {
+		return Math.round(value * 100.0) / 100.0;
 	}
 }

@@ -33,4 +33,19 @@ class UberCabRentalSystemApplicationTests {
         assertEquals(PaymentStatus.PAID, completed.paymentStatus());
         assertEquals(completed.estimatedFare(), completed.finalFare());
     }
+
+    @Test @Transactional
+    void driversOnlySeeNearbyCompatibleRequestedRides() {
+        var rider = riderRepository.save(new Rider(UUID.randomUUID(), "Riya"));
+        var miniDriver = drivers.create(new CreateDriverRequest("Aman", VehicleType.MINI, 19.0760, 72.8777));
+        drivers.create(new CreateDriverRequest("Nikhil", VehicleType.SEDAN, 19.0760, 72.8777));
+        var nearbyMini = rides.create(new CreateRideRequest(rider.getId(), new Location(19.0770, 72.8780, "Bandra"), new Location(19.1000, 72.9000, "Andheri"), VehicleType.MINI));
+        rides.create(new CreateRideRequest(rider.getId(), new Location(19.0770, 72.8780, "Bandra"), new Location(19.1000, 72.9000, "Andheri"), VehicleType.SEDAN));
+        rides.create(new CreateRideRequest(rider.getId(), new Location(19.2760, 72.8777, "Far away"), new Location(19.3000, 72.9000, "Further away"), VehicleType.MINI));
+
+        var offers = rides.availableForDriver(miniDriver.id());
+
+        assertEquals(1, offers.size());
+        assertEquals(nearbyMini.ride().id(), offers.getFirst().ride().id());
+    }
 }

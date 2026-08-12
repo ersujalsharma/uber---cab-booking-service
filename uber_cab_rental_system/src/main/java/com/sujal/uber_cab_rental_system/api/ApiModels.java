@@ -62,4 +62,6 @@ public final class ApiModels {
 
 	public record RideCreatedResponse(RideResponse ride, List<DriverResponse> nearbyDrivers) {
 	}
+	public record RideOfferResponse(RideResponse ride, double pickupDistanceKm) {
+	}
 }

@@ -10,6 +10,8 @@ This Spring Boot API implements the lifecycle from the system-design diagram: ri
 
 H2 is the default local database, so no infrastructure is needed for development.
 
+Once the application starts, open [Swagger UI](http://localhost:8080/swagger-ui.html) to browse and call the APIs. The machine-readable OpenAPI document is available at `/v3/api-docs`.
+
 ## API
 
 | Method | Path | Purpose |
@@ -17,6 +19,7 @@ H2 is the default local database, so no infrastructure is needed for development
 | `POST` | `/riders` | Create a rider |
 | `POST` | `/drivers` | Register an available driver and vehicle type |
 | `PATCH` | `/drivers/{id}/location` | Update a driver's live location |
+| `GET` | `/drivers/{id}/ride-requests` | View compatible requested rides within 5 km |
 | `POST` | `/rides` | Request a ride and find drivers within 5 km |
 | `POST` | `/rides/{id}/accept` | Atomically assign a driver and issue OTP |
 | `POST` | `/rides/{id}/start` | Verify OTP and start ride |
